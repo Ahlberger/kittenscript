@@ -130,6 +130,7 @@ let bot;
                         ["minerals", "slab"],
                         ["coal", "steel"],
                         ["iron", "plate"],
+                        ["oil", "kerosene"]
 
                     ];
 
