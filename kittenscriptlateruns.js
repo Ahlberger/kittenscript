@@ -146,6 +146,8 @@ let bot;
                         gamePage.craft(resources[i][1],10);
                         gamePage.craft(resources[i][1],10);
                         gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
                     }
                 }
                 if(gamePage.resPool.get('slab').value > 100000000 && gamePage.resPool.get('concrate').unlocked)
