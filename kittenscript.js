@@ -131,6 +131,7 @@ let bot;
                         ["coal", "steel"],
                         ["iron", "plate"],
                         ["oil", "kerosene"]
+                        ["uranium", "thorium"]
 
                     ];
 
