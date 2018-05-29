@@ -147,8 +147,8 @@ let bot;
                         gamePage.craft(resources[i][1],10);
                     }
                 }
-                if(gamePage.resPool.get('slab').value > 200000 && gamePage.resPool.get('concrate').unlocked)
-                    while(gamePage.resPool.get('slab').value > 190000)
+                if(gamePage.resPool.get('slab').value > 200000000 && gamePage.resPool.get('concrate').unlocked)
+                    while(gamePage.resPool.get('slab').value > 190000000)
                         gamePage.craft(gamePage.resPool.get('concrate').name,1);
                 var titan = gamePage.resPool.get('titanium');
                 var steel = gamePage.resPool.get('steel');
