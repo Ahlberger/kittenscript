@@ -1,6 +1,5 @@
 let bot;
     var observe, autoTrade, compedium, manuscript, parchment, blueprint, autoHunt, autoCraft, autoPray, save;
-    var intervals=[autoTrade ,compedium ,manuscript ,parchment ,blueprint ,autoHunt ,autoCraft ,autoPray];
     class kittenBot
     {
         init()
@@ -130,8 +129,6 @@ let bot;
                         ["minerals", "slab"],
                         ["coal", "steel"],
                         ["iron", "plate"],
-                        ["oil", "kerosene"]
-                        ["uranium", "thorium"]
 
                     ];
 
@@ -140,10 +137,22 @@ let bot;
                     var curRes = gamePage.resPool.get(resources[i][0]);
                     if (curRes.value / curRes.maxValue > 0.99 && gamePage.workshop.getCraft(resources[i][1]).unlocked)
                     {
-                        gamePage.craftAll(resources[i][1]);
-        }
-    }
-}, 5 * 1000);
+                        gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
+                        gamePage.craft(resources[i][1],10);
+                    }
+                }
+                if(gamePage.resPool.get('slab').value > 200000 && gamePage.resPool.get('concrate').unlocked)
+                    while(gamePage.resPool.get('slab').value > 190000)
+                        gamePage.craft(gamePage.resPool.get('concrate').name,1);
+                var titan = gamePage.resPool.get('titanium');
+                var steel = gamePage.resPool.get('steel');
+                var coal = gamePage.resPool.get('coal');
+                if(titan.value/titan.maxValue>0.99 && steel.value/coal.maxValue>0.1 && gamePage.resPool.get('alloy').unlocked)
+                    gamePage.craft(gamePage.resPool.get('alloy'),10);
+            }, 2 * 1000);
         }
 
         pray()
