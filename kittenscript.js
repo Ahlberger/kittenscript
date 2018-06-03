@@ -138,7 +138,7 @@ let bot;
                 for (var i = 0; i < resources.length; i++)
                 {
                     var curRes = gamePage.resPool.get(resources[i][0]);
-                    if (curRes.value / curRes.maxValue > 0.99 && gamePage.workshop.getCraft(resources[i][1]).unlocked)
+                    if (curRes.value / curRes.maxValue > 0.95 && gamePage.workshop.getCraft(resources[i][1]).unlocked)
                     {
                         gamePage.craft(resources[i][1],10);
                         gamePage.craft(resources[i][1],10);
@@ -153,9 +153,9 @@ let bot;
                 var titan = gamePage.resPool.get('titanium');
                 var steel = gamePage.resPool.get('steel');
                 var coal = gamePage.resPool.get('coal');
-                if(titan.value/titan.maxValue>0.99 && steel.value/coal.maxValue>0.1 && gamePage.resPool.get('alloy').unlocked)
+                if(titan.value/titan.maxValue>0.95 && steel.value/coal.maxValue>0.1 && gamePage.resPool.get('alloy').unlocked)
                     gamePage.craft(gamePage.resPool.get('alloy'),10);
-            }, 2 * 1000);
+            }, 5 * 1000);
         }
 
         pray()
